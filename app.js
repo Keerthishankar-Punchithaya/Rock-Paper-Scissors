@@ -18,14 +18,22 @@ console.log(getComputerChoice());
 function game(userChoice) {
     const computerChoice = getComputerChoice();
     const name = "pine";
-    switch(name) {
-        case "apple":
-            console.log("this is apple");   
+    switch(userChoice + computerChoice) {
+        case "rs":
+        case "pr":
+        case "sp":
+            console.log("User wins!");
             break;
-        case "pine":
-            console.log("this is pine");
+        case "rp":
+        case "ps":
+        case "sr":
+            console.log("Computer wins!");
             break;
-        
+        case "rr":
+        case "pp":
+        case "ss":
+            console.log("Its a draw.");
+            break;
     }
 }
 game("c");
