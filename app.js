@@ -17,8 +17,14 @@ console.log(getComputerChoice());
 
 function game(userChoice) {
     const computerChoice = getComputerChoice();
-    console.log("user choice => " + userChoice);
-    console.log("computer choice => " + computerChoice);
+    // console.log("user choice => " + userChoice);
+    // console.log("computer choice => " + computerChoice);
+    const name = "Keerthishankar";
+    if (name === "Keerthishankar") {
+        console.log('hello')
+    } elseif (name === "pine" {
+        console.log('hi')
+    }) 
 }
 game("c");
 
