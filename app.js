@@ -1,5 +1,5 @@
-const userScore = 0;
-const computerScore = 0;
+let userScore = 0;
+let computerScore = 0;
 const userScore_span = document.getElementById("user-score");
 const computerScore_span = document.getElementById("computer-score");
 const scoreBoard_div = document.querySelector(".score-board");
@@ -15,6 +15,20 @@ function getComputerChoice() {
 }
 console.log(getComputerChoice());
 
+function win() {
+    userScore++;
+    console.log("You win!");
+    console.log(userScore);
+}
+
+function lose() {
+    console.log("Lose!");
+}
+
+function draw() {
+    console.log("Draw!");
+}
+
 function game(userChoice) {
     const computerChoice = getComputerChoice();
     const name = "pine";
@@ -22,17 +36,17 @@ function game(userChoice) {
         case "rs":
         case "pr":
         case "sp":
-            console.log("User wins!");
+            win();
             break;
         case "rp":
         case "ps":
         case "sr":
-            console.log("Computer wins!");
+            lose();
             break;
         case "rr":
         case "pp":
         case "ss":
-            console.log("Its a draw.");
+            draw();
             break;
     }
 }
